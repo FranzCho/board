@@ -24,8 +24,11 @@ import {
 } from "../../../styles/boardsNew";
 import { useState } from 'react'
 import { useMutation, gql } from '@apollo/client';
+import { useRouter } from "next/router";
 
 export default function BoardsNewPage() {
+  const router = useRouter();
+
   const [writer, setWriter] = useState("");
   const [password, setPassword] = useState("");
   const [title, setTitle] = useState("");
